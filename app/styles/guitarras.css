@@ -1,0 +1,123 @@
+.guitarras-grid {
+    display: grid;
+    gap: 4rem;
+}
+
+@media (min-width: 768px) {
+    .guitarras-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .guitarras-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.guitarra {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .guitarra.producto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .guitarra.producto img {
+        max-width: 50%;
+    }
+
+    .guitarra.producto .contenido {
+        text-align: center;
+    }
+}
+
+
+.guitarra .contenido {
+    padding: 1rem;
+}
+
+.guitarra .contenido h3 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+/* HACK PARA CORTAR TEXTO DESPUES DE DETERMINADOS PARRAFOS */
+.guitarra .descripcion {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    font-size: 1.8rem;
+}
+
+.guitarra .precio {
+    color: var(--primary);
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.guitarra .enlace {
+    display: block;
+    margin-top: 2rem;
+    background-color: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    padding: .5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 900;
+    transition-property : background-color;
+    transition-duration: 200ms;
+}
+
+.guitarra .enlace:hover {
+    background-color: var(--primary);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.formulario select {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--black);
+}
+
+.formulario input[type="submit"] {
+    margin-top: 2.5rem;
+    padding: 1.8rem;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--black);
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 200ms;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: var(--primary);
+}
